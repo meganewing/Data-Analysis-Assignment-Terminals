@@ -1,0 +1,180 @@
+Last login: Mon Jun 15 16:09:32 on ttys001
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Megans-MBP-3:~ meganewing$ whoami
+meganewing
+Megans-MBP-3:~ meganewing$ pwd
+/Users/meganewing
+Megans-MBP-3:~ meganewing$ cd Desktop/shell-novice/data/users/nelle
+-bash: cd: Desktop/shell-novice/data/users/nelle: No such file or directory
+Megans-MBP-3:~ meganewing$ cd Desktop/shellNovice/data/users/nelle
+Megans-MBP-3:nelle meganewing$ ls
+Desktop			molecules		pizza.cfg
+creatures		north-pacific-gyre	solar.pdf
+data			notes.txt		writing
+Megans-MBP-3:nelle meganewing$ ls -f
+.			Desktop			creatures
+..			solar.pdf		.bash_profile
+molecules		pizza.cfg		data
+notes.txt		north-pacific-gyre	writing
+Megans-MBP-3:nelle meganewing$ ls -f data
+.		..		sunspot.txt	amino-acids.txt	elements	morse.txt	pdb		planets.txt
+Megans-MBP-3:nelle meganewing$ ls -f /data
+ls: /data: No such file or directory
+Megans-MBP-3:nelle meganewing$ pwd
+/Users/meganewing/Desktop/shellNovice/data/users/nelle
+Megans-MBP-3:nelle meganewing$ ls
+Desktop			data			north-pacific-gyre	pizza.cfg		writing
+creatures		molecules		notes.txt		solar.pdf
+Megans-MBP-3:nelle meganewing$ cd data
+Megans-MBP-3:data meganewing$ pwd
+/Users/meganewing/Desktop/shellNovice/data/users/nelle/data
+Megans-MBP-3:data meganewing$ ls
+amino-acids.txt	elements	morse.txt	pdb		planets.txt	sunspot.txt
+Megans-MBP-3:data meganewing$ ls -f
+.		..		sunspot.txt	amino-acids.txt	elements	morse.txt	pdb		planets.txt
+Megans-MBP-3:data meganewing$ cd ..
+Megans-MBP-3:nelle meganewing$ pwd
+/Users/meganewing/Desktop/shellNovice/data/users/nelle
+Megans-MBP-3:nelle meganewing$ ls -F -a
+./			Desktop/		molecules/		pizza.cfg
+../			creatures/		north-pacific-gyre/	solar.pdf
+.bash_profile		data/			notes.txt		writing/
+Megans-MBP-3:nelle meganewing$ ls north-pacific-gyre/2012-07-03/
+NENE01729A.txt	NENE01751A.txt	NENE01843A.txt	NENE01978A.txt	NENE02040A.txt	NENE02043A.txt	goostats
+NENE01729B.txt	NENE01751B.txt	NENE01843B.txt	NENE01978B.txt	NENE02040B.txt	NENE02043B.txt
+NENE01736A.txt	NENE01812A.txt	NENE01971Z.txt	NENE02018B.txt	NENE02040Z.txt	goodiff
+Megans-MBP-3:nelle meganewing$ /users/nelle
+-bash: /users/nelle: No such file or directory
+Megans-MBP-3:nelle meganewing$ pwd
+/Users/meganewing/Desktop/shellNovice/data/users/nelle
+Megans-MBP-3:nelle meganewing$ ls -F
+Desktop/		data/			north-pacific-gyre/	pizza.cfg		writing/
+creatures/		molecules/		notes.txt		solar.pdf
+Megans-MBP-3:nelle meganewing$ mkdir thesis
+Megans-MBP-3:nelle meganewing$ ls -F
+Desktop/		data/			north-pacific-gyre/	pizza.cfg		thesis/
+creatures/		molecules/		notes.txt		solar.pdf		writing/
+Megans-MBP-3:nelle meganewing$ ls -F thesis
+Megans-MBP-3:nelle meganewing$ cd thesis
+Megans-MBP-3:thesis meganewing$ nano draft.txt
+Megans-MBP-3:thesis meganewing$ ls
+draft.txt
+Megans-MBP-3:thesis meganewing$ rm draft.txt
+Megans-MBP-3:thesis meganewing$ ls
+Megans-MBP-3:thesis meganewing$ ls molecules
+ls: molecules: No such file or directory
+Megans-MBP-3:thesis meganewing$ ..
+-bash: ..: command not found
+Megans-MBP-3:thesis meganewing$ cd ..
+Megans-MBP-3:nelle meganewing$ pwd
+/Users/meganewing/Desktop/shellNovice/data/users/nelle
+Megans-MBP-3:nelle meganewing$ ls -F
+Desktop/		data/			north-pacific-gyre/	pizza.cfg		thesis/
+creatures/		molecules/		notes.txt		solar.pdf		writing/
+Megans-MBP-3:nelle meganewing$ ls molecules
+cubane.pdb	ethane.pdb	methane.pdb	octane.pdb	pentane.pdb	propane.pdb
+Megans-MBP-3:nelle meganewing$ cd molecules
+Megans-MBP-3:molecules meganewing$ wc *.pdb
+      20     156    1158 cubane.pdb
+      12      84     622 ethane.pdb
+       9      57     422 methane.pdb
+      30     246    1828 octane.pdb
+      21     165    1226 pentane.pdb
+      15     111     825 propane.pdb
+     107     819    6081 total
+Megans-MBP-3:molecules meganewing$ wc -l *.pdb
+      20 cubane.pdb
+      12 ethane.pdb
+       9 methane.pdb
+      30 octane.pdb
+      21 pentane.pdb
+      15 propane.pdb
+     107 total
+Megans-MBP-3:molecules meganewing$ wc -w *.pdb
+     156 cubane.pdb
+      84 ethane.pdb
+      57 methane.pdb
+     246 octane.pdb
+     165 pentane.pdb
+     111 propane.pdb
+     819 total
+Megans-MBP-3:molecules meganewing$ wc -c *.pdb
+    1158 cubane.pdb
+     622 ethane.pdb
+     422 methane.pdb
+    1828 octane.pdb
+    1226 pentane.pdb
+     825 propane.pdb
+    6081 total
+Megans-MBP-3:molecules meganewing$ wc -l *.pdb > lengths
+Megans-MBP-3:molecules meganewing$ ls lengths
+lengths
+Megans-MBP-3:molecules meganewing$ cat lengths
+      20 cubane.pdb
+      12 ethane.pdb
+       9 methane.pdb
+      30 octane.pdb
+      21 pentane.pdb
+      15 propane.pdb
+     107 total
+Megans-MBP-3:molecules meganewing$ sort -n lengths
+       9 methane.pdb
+      12 ethane.pdb
+      15 propane.pdb
+      20 cubane.pdb
+      21 pentane.pdb
+      30 octane.pdb
+     107 total
+Megans-MBP-3:molecules meganewing$ sort -n lengths > sorted-lengths
+Megans-MBP-3:molecules meganewing$ head -1 sorted-lengths
+       9 methane.pdb
+Megans-MBP-3:molecules meganewing$ sort -n lengths | head -1
+       9 methane.pdb
+Megans-MBP-3:molecules meganewing$ wc -l *.pdb | sort -n | head -1
+       9 methane.pdb
+Megans-MBP-3:molecules meganewing$ cd north-pacific-gyre/2012-07-03
+-bash: cd: north-pacific-gyre/2012-07-03: No such file or directory
+Megans-MBP-3:molecules meganewing$ pwd
+/Users/meganewing/Desktop/shellNovice/data/users/nelle/molecules
+Megans-MBP-3:molecules meganewing$ cd ..
+Megans-MBP-3:nelle meganewing$ cd north-pacific-gyre/2012-07-03/
+Megans-MBP-3:2012-07-03 meganewing$ wc -l *.txt
+     300 NENE01729A.txt
+     300 NENE01729B.txt
+     300 NENE01736A.txt
+     300 NENE01751A.txt
+     300 NENE01751B.txt
+     300 NENE01812A.txt
+     300 NENE01843A.txt
+     300 NENE01843B.txt
+     300 NENE01971Z.txt
+     300 NENE01978A.txt
+     300 NENE01978B.txt
+     240 NENE02018B.txt
+     300 NENE02040A.txt
+     300 NENE02040B.txt
+     300 NENE02040Z.txt
+     300 NENE02043A.txt
+     300 NENE02043B.txt
+    5040 total
+Megans-MBP-3:2012-07-03 meganewing$ wc -l *.txt | sort -n | head -5
+     240 NENE02018B.txt
+     300 NENE01729A.txt
+     300 NENE01729B.txt
+     300 NENE01736A.txt
+     300 NENE01751A.txt
+Megans-MBP-3:2012-07-03 meganewing$ wc -l *.txt | sort -n | tail -5
+     300 NENE02040B.txt
+     300 NENE02040Z.txt
+     300 NENE02043A.txt
+     300 NENE02043B.txt
+    5040 total
+Megans-MBP-3:2012-07-03 meganewing$ ls *Z.txt
+NENE01971Z.txt	NENE02040Z.txt
+Megans-MBP-3:2012-07-03 meganewing$ ls *[AB].txt
+NENE01729A.txt	NENE01736A.txt	NENE01751B.txt	NENE01843A.txt	NENE01978A.txt	NENE02018B.txt	NENE02040B.txt	NENE02043B.txt
+NENE01729B.txt	NENE01751A.txt	NENE01812A.txt	NENE01843B.txt	NENE01978B.txt	NENE02040A.txt	NENE02043A.txt
+Megans-MBP-3:2012-07-03 meganewing$ 
