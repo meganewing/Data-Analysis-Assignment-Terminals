@@ -1,2 +1,2 @@
-# Week-2
-"Navigating the command line" assignment from week 2 of intro to data analysis for aquatic sciences
+# Intro to Data Analyiss for Aquatic Sciences assignments
+Final terminals for each assignment after completion
