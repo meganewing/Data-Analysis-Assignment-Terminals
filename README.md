@@ -1,2 +1,2 @@
-# Intro to Data Analyiss for Aquatic Sciences assignments
+# Intro to Data Analyis for Aquatic Sciences assignments
 Final terminals for each assignment after completion
